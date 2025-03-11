@@ -1,17 +1,12 @@
 import pygame
-pygame.init()
 
 screen=pygame.display.set_mode([300,300])
 pygame.display.set_caption("Lumemees")
 screen.fill([0, 0, 0])
-pygame.draw.circle(screen, [255,255,255], [150,50])
+pygame.draw.circle(screen, [255,255,255], [150,225], 45, 1)
+pygame.draw.circle(screen, [255,255,255], [150,145], 35, 1)
+pygame.draw.circle(screen, [255,255,255], [150,85], 25, 1)
 
-pygame.display.update()
-running = True
-while running:
-
-    # event loop
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+pygame.display.flip()
+pygame.init()
 pygame.quit()
